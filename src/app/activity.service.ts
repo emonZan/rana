@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Activity } from './types';
 
 @Injectable({
   providedIn: 'root'
 })
-
-const api = 'https://orangevalleycaa.org/api/videos';
 
 export class ActivityService {
 
@@ -13,11 +13,14 @@ export class ActivityService {
     private httpClient: HttpClient
   ) { }
 
-  getActivity(id: string) {
-    return this.httpClient.get(api + '/id/' + id);
+  getActivity(id: string): Observable<Activity> {
+    return this.httpClient.get<Activity>(api + '/id/' + id);
   }
 
-  getAllAcivities() {
-    return this.httpClient.get(api);
+  getAllAcivities(): Observable<Activity[]> {
+    return this.httpClient.get<Activity[]>(api);
   }
 }
+
+const api = 'https://orangevalleycaa.org/api/videos';
+

@@ -7,39 +7,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-img src="assets/image/MAKV9608.JPG"></ion-img>
+  <ion-card *ngFor="let activity of (activityList | async)" button>
+    <ion-img [src]="activity.cropped"></ion-img>
     <ion-card-header>
-      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-      <ion-card-title>Emon's Activity</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-  <ion-card>
-    <ion-img src="assets/image/MAKV9608.JPG"></ion-img>
-    <ion-card-header>
-      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-      <ion-card-title>Emon's Activity</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-  <ion-card>
-    <ion-img src="assets/image/MAKV9608.JPG"></ion-img>
-    <ion-card-header>
-      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-      <ion-card-title>Emon's Activity</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-  <ion-card>
-    <ion-img src="assets/image/MAKV9608.JPG"></ion-img>
-    <ion-card-header>
-      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-      <ion-card-title>Emon's Activity</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-  <ion-card>
-    <ion-img src="assets/image/MAKV9608.JPG"></ion-img>
-    <ion-card-header>
-      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-      <ion-card-title>Emon's Activity</ion-card-title>
+      <ion-card-title>{{activity.name}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 </ion-content>
