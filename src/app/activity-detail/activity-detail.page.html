@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="activityDetail?.image"></ion-img>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{activityDetail?.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{activityDetail?.description}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivityService } from '../activity.service';
 import { Observable } from 'rxjs';
 import { Activity } from '../types';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -10,11 +11,12 @@ import { Activity } from '../types';
 })
 export class Tab1Page implements OnInit {
   activityList: Observable<Activity[]>;
-  constructor(private activityService: ActivityService) { 
-
-  }
-  ngOnInit() { 
+  constructor(private activityService: ActivityService,
+    private router: Router) {
     this.activityList = this.activityService.getAllAcivities();
 
   }
+  ngOnInit() {
+  }
+
 }

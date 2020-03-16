@@ -7,8 +7,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let activity of (activityList | async)" button>
-    <ion-img [src]="activity.cropped"></ion-img>
+  <ion-card button [routerLink]="['activity-detail', activity.id]" *ngFor="let activity of (activityList | async)">
+    <!-- <ion-img [src]="activity.cropped"></ion-img> -->
     <ion-card-header>
       <ion-card-title>{{activity.name}}</ion-card-title>
     </ion-card-header>
