@@ -17,4 +17,31 @@
       {{activityDetail?.description}}
     </ion-card-content>
   </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label>Duration</ion-label>
+        <ion-chip color="primary">
+          {{activityDetail?.duration}}
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-label>Category</ion-label>
+        <ion-chip color="primary">
+          {{activityDetail?.category}}
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-label>Polularity</ion-label>
+        <ion-chip color="primary">
+          {{activityDetail?.popularity}}
+        </ion-chip>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openModal()">
+      <ion-icon name="play"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

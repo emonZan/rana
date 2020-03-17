@@ -7,8 +7,25 @@
 </ion-header>
 
 <ion-content>
+  <div *ngIf="!activityList">
+    <ion-card>
+      <ion-skeleton-text animated class="skeleton-image"></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-card>
+    <ion-card>
+      <ion-skeleton-text animated class="skeleton-image"></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-card>
+    <ion-card>
+      <ion-skeleton-text animated class="skeleton-image"></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-card>
+  </div>
   <ion-card button [routerLink]="['activity-detail', activity.id]" *ngFor="let activity of (activityList | async)">
-    <!-- <ion-img [src]="activity.cropped"></ion-img> -->
+    <ion-img [src]="activity.cropped"></ion-img>
     <ion-card-header>
       <ion-card-title>{{activity.name}}</ion-card-title>
     </ion-card-header>
