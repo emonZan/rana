@@ -1,17 +1,21 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <ion-avatar class="profile-pic" (click)="selectImageSource()">
+    <img [src]="myProfileImage" />
+  </ion-avatar>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Emon Zan</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      The most beautiful girl
+    </ion-card-content>
+  </ion-card>
 </ion-content>

@@ -12,7 +12,8 @@ export class ActivityVideoPage implements OnInit {
     private navparams: NavParams) { }
 
   ngOnInit() {
-    this.videoURL = this.navparams.get('videoURL');
+    // this.videoURL = this.navparams.get('videoURL');
+    this.videoURL = 'assets/video/demo-video.mp4'
     console.log(this.videoURL);
   }
 
